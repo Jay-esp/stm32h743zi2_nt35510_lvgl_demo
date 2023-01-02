@@ -32,5 +32,9 @@ MOSI PB5
 CS PA4
 CLK PA5
 
+A few issues however:
+- serial monitor no longer works, some pins are shared between display and stlink uart, maybe the clock setting disturbs it too.
+- an invalidate screen command is included, without it the cpu is less loaded but the display is garbled.
+Let me know if you have solutions to these issues.
 
 
