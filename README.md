@@ -1,6 +1,9 @@
 # stm32h743zi2_nt35510_lvgl_demo
-Demo code for lvgl on arduino IDE, stm32h743zi2 nucleo board at 480Mhz, 3.97" display nt35510
+Demo code for lvgl V8 on arduino IDE, stm32h743zi2 nucleo board at 480Mhz, 3.97" display nt35510
 This is based on the example code from the lcd wiki, it is not perfect but works for me.
+
+
+
 Connections to fmc display
 DB0 PD14
 DB1 PD15
