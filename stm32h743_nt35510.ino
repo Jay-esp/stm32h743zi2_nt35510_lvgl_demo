@@ -152,7 +152,7 @@ void my_disp_flush(lv_disp_drv_t * disp, const lv_area_t * area, lv_color_t * co
 {
   uint32_t w = (area->x2 - area->x1);
   uint32_t h = (area->y2 - area->y1);
-  LCD_SetWindows(area->x1, area->y1, w, h);
+   LCD_SetWindows(area->x1, area->y1, area->x2, area->y2);
   int32_t x;
   int32_t y;
   for (y = area->y1; y <= area->y2; y++) {
@@ -185,8 +185,7 @@ void my_touchpad_read(lv_indev_drv_t * indev, lv_indev_data_t * data)
     data->point.x = touchX;
     data->point.y = touchY;
   }
-  // note: this line is required to avoid garbled screen, it does slow down the cpu but for now, it works
-  lv_obj_invalidate(lv_scr_act());
+  
   return;
 }
 
