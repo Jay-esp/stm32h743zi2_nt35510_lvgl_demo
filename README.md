@@ -1,7 +1,7 @@
 # stm32h743zi2_nt35510_lvgl_demo
 Demo code for lvgl V8 on arduino IDE, stm32h743zi2 nucleo board at 480Mhz, 3.97" display nt35510
-This is based on the example code from the lcd wiki, it is not perfect but works for me.
-
+This is based on the example code from the lcd wiki.
+18/1/2023 Fixed a bug in the display flush routine.
 
 
 Connections to fmc display
@@ -33,8 +33,6 @@ CS PA4
 CLK PA5
 
 A few issues however:
-- serial monitor no longer works, some pins are shared between display and stlink uart, maybe the clock setting disturbs it too.
-- an invalidate screen command is included, without it the cpu is less loaded but the display is garbled.
-Let me know if you have solutions to these issues.
+- serial monitor no longer works, some pins are shared between display and stlink uart 
 
 
